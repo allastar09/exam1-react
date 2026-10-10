@@ -63,14 +63,27 @@ function Todo() {
     >
       <h2>{user.name}</h2>
 
-      <input type="checkbox" checked={user.status} readOnly />
+     <input
+  type="checkbox"
+  checked={user.status}
+  onChange={() => {
+    setData(
+      data.map((el) => {
+        if (el.id === user.id) {
+          return { ...el, status: !el.status };
+        }
+        return el;
+      })
+    );
+  }}
+/>
 
-      <p>(user.status)</p>
+<p>{user.status}</p>
 
       <button
         className="w-[100px] border bg-[red] text-[white] rounded-[7px]"
         onClick={() =>
-          setData(data.filter((el) => el.id !== user.id))
+          setData(data.filter((el) => el.id !== user.id ))
         }
       >
         Delete
