@@ -3,6 +3,7 @@ import food from './img/porapoest-top 1.png';
 import Section from './hands';
 import Premium from './premium';
 import Servis from './servis';
+import Todo from './todolist';
 
 import hand from './img/Group.svg';
 import hand2 from './img/Frame(1).svg';
@@ -130,8 +131,10 @@ function App() {
 
     {/* Вакти тудушка зани мазама мегрозона хози и тудушка бл */}
     
-    
+    <div>
 
+    </div>
+        <Todo/>
     </div>
   );
 }
